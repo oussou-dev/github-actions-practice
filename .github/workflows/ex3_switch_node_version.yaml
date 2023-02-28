@@ -15,7 +15,7 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: ${{env.NODE_VERSION}}
-        - name: run test
+        - name: run test_
           shell: bash
           run: |
             node -V
