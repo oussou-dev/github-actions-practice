@@ -18,6 +18,6 @@ jobs:
         - name: run test_
           shell: bash
           run: |
-            node -V
+            node -v
             npm install
             npm test
