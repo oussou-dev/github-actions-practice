@@ -1,0 +1,23 @@
+env:
+  NODE_VERSION: 14  
+
+name: Switch Node version
+on: 
+  pull_request:
+
+jobs:
+  run-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@v3
+        - name : setup node
+          uses: actions/setup-node@v3
+          with:
+            node-version: ${{en.NODE_VERSION}}
+        - name: run test
+          shell: bash
+          run: |
+            npm node -V
+            npm install
+            npm test
